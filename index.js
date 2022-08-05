@@ -10,6 +10,9 @@ app.use(cors({
 const dotenv = require("dotenv").config();
 const URL = process.env.DB;
 
+app.get("/", (req, res) =>
+  res.send(`Server Running`)
+);
 
 app.post("/addteacher",async function(req,res){
     try{
